@@ -32,8 +32,12 @@ Route::delete('/dashbord/blog/delete/{id}', [App\Http\Controllers\BlogController
 
 
 // ========== dashbord part ===========//
-Route::get('/dashbord', [App\Http\Controllers\DashbordController::class, 'index'])->name('dashbord.index');
+// Route::get('/dashbord', [App\Http\Controllers\DashbordController::class, 'index'])->name('dashbord.index');
+Route::get('/dashbord/profile', [App\Http\Controllers\DashbordController::class, 'profile'])->name('dashbord.profile');
+Route::post('/dashbord/profile/update', [App\Http\Controllers\DashbordController::class, 'update'])->name('profile.update');
 Route::get('/dashbord/blog', [App\Http\Controllers\BlogController::class, 'blog'])->name('dashbord.blog');
+
+
 
 
 
